@@ -1,0 +1,119 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-500: #8ab80d;
+    --background-icon: #171717;
+
+    --background-card: #262626;
+}
+body {
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(#000, #282828);
+}
+body, html {
+    font-family: 'Inter';
+}
+.app header {
+    text-align: center;
+    color: #fff;
+
+    position: relative;
+}
+.app header input {
+    width: 60%;
+    padding: 9px;
+    border-radius: 5px;
+
+    border: 0;
+    background: #222;
+    font-family: 'Inter';
+
+    font-size: 1rem;
+    color: #eee;
+
+    margin-top: 10px;
+}
+.app header .icon {
+    position: absolute;
+    top: 3.7rem;
+    right: 9rem;
+
+    color: #ddd;
+}
+.app header input:focus {
+    border: 0;
+    outline: none;
+}
+.app .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+
+    gap: 22px;
+    margin-top: 45px;
+}
+.app .cards .card {
+    width: 320px;
+    height: 220px;
+    background: var(--background-card);
+
+    padding: 22px;
+    border-radius: 7px;
+
+    display: grid;
+    gap: 17px;
+    transition: .3s;
+    cursor: pointer;
+}
+.cards:has(.card:hover) .card:not(:hover){
+    scale: .98;
+    opacity: .6;
+}
+.cards .card h4 {
+    font-size: 1.5rem;
+    color: #eee;
+}
+.cards .card h4 .icon {
+    color: var(--primary-500);
+    border-radius: 50%  ;
+
+    padding: 9px;
+    font-size: 1rem;
+    background: var(--background-icon);    
+}
+.cards .card p {
+    color: rgb(128, 128, 128);
+    letter-spacing: .1px;
+    font-size: .9rem;
+    font-weight: 400;
+
+    line-height: 21px;
+}
+.cards .card a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    
+    body {
+        height: 110vh;
+    }
+    .app .cards .card{
+        width: 250px;
+    }
+    .app header input {
+        width: 80%;
+    }
+    .app header .icon {
+        right: 4rem;
+    }
+}
