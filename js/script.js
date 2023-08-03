@@ -4,7 +4,6 @@ const filterElement = document.querySelector('header input')
 
 const cards = document.querySelectorAll('.cards .card')
 
-
 function filtercards(){
 
     if(filterElement.value != ""){
